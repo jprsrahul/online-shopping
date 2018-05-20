@@ -17,7 +17,33 @@ public class PageController {
 		mv.addObject("greeting","welcome");
 		return mv;
 	}
-@RequestMapping(value = {"/test"})
+	
+	@RequestMapping(value = {"/about"})
+
+	public ModelAndView about() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title","about");
+		mv.addObject("UserClickAbout",true);
+		return mv;
+	}
+	@RequestMapping(value = {"/listproduct"})
+
+	public ModelAndView listProduct() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title","listproduct");
+		mv.addObject("UserClicklistproduct",true);
+		return mv;
+	}
+
+	@RequestMapping(value = {"/contact"})
+
+	public ModelAndView contact() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title","contact");
+		mv.addObject("UserClickcontact",true);
+		return mv;
+	}
+ /*@RequestMapping(value = {"/test"})
 	
 	public ModelAndView test(@RequestParam(value="greeting", required=false)String greeting) {
 	if(greeting==null) {
@@ -34,6 +60,6 @@ public ModelAndView test1(@PathVariable("greeting")String greeting) {
 ModelAndView mv = new ModelAndView("page");
 	mv.addObject("greeting",greeting);
 	return mv;
-}
+}*/
 
 }
