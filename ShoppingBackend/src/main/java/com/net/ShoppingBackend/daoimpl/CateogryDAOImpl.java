@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.net.ShoppingBackend.dao.CateogryDAO;
 import com.net.ShoppingBackend.dto.Cateogry;
 
-@Repository("cateogryDAO")
+@Repository("catogryDAO")
 public class CateogryDAOImpl implements CateogryDAO {
 
 private static List<Cateogry> cateogries = new ArrayList<>();
@@ -23,10 +23,17 @@ static {
 	
 	cateogries.add(cateogry);
 	
-	cateogry.setId(1);
+	cateogry.setId(2);
 	cateogry.setName("rahuddd");
 	cateogry.setDescription("ssssaasss");
 	cateogry.setImageUrl("ddwwwdd");
+	
+	cateogries.add(cateogry);
+	
+	cateogry.setId(3);
+	cateogry.setName("slok");
+	cateogry.setDescription("dell");
+	cateogry.setImageUrl("des");
 	
 	cateogries.add(cateogry);
 }
@@ -35,6 +42,16 @@ static {
 	public List<Cateogry> list() {
 		
 		return cateogries;
+		
+	}
+
+	@Override
+	public Cateogry get(int id) {
+		for(Cateogry cateogry : cateogries) {
+			if(cateogry.getId()==id)
+				return cateogry;
+		}
+		return null;
 	}
 
 }

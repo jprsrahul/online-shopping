@@ -7,5 +7,5 @@ import com.net.ShoppingBackend.dto.Cateogry;
 public interface CateogryDAO {
 
 	List<Cateogry> list();
-
+    Cateogry get(int id);
 }

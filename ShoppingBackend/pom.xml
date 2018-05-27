@@ -17,6 +17,7 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
       <spring.version>4.3.16.RELEASE</spring.version>
+      <hibernate.version>5.2.7.final</hibernate.version>
   </properties>
 
   <dependencies>
@@ -30,7 +31,18 @@
     <groupId>org.springframework</groupId>
     <artifactId>spring-context</artifactId>
     <version>${spring.version}</version>
+    
 </dependency>
+
+
+<!--h2database-->
+
+
+
+<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+
+
+
   </dependencies>
 
   <build>
