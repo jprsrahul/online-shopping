@@ -1,20 +1,27 @@
 package com.net.OnlineShop.Controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.net.ShoppingBackend.dao.CateogryDAO;
 
 @Controller
 
 public class PageController {
 	
+	//@Autowired
+	//private CateogryDAO cateogryDAO;
+	
 	@RequestMapping(value = {"/","/home","/index"})
 	
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greeting","welcome");
+		mv.addObject("title","home");
+		//mv.addObject("cateogries",cateogryDAO.list());
+		mv.addObject("UserClickhome",true);
+		
 		return mv;
 	}
 	
@@ -24,6 +31,8 @@ public class PageController {
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title","about");
 		mv.addObject("UserClickAbout",true);
+		
+		
 		return mv;
 	}
 	@RequestMapping(value = {"/listproduct"})
@@ -43,23 +52,6 @@ public class PageController {
 		mv.addObject("UserClickcontact",true);
 		return mv;
 	}
- /*@RequestMapping(value = {"/test"})
-	
-	public ModelAndView test(@RequestParam(value="greeting", required=false)String greeting) {
-	if(greeting==null) {
-		greeting="hello There";
-	}
-	ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greeting",greeting);
-		return mv;
-	}
 
-@RequestMapping(value = {"/test/{greeting}"})
-
-public ModelAndView test1(@PathVariable("greeting")String greeting) {
-ModelAndView mv = new ModelAndView("page");
-	mv.addObject("greeting",greeting);
-	return mv;
-}*/
 
 }

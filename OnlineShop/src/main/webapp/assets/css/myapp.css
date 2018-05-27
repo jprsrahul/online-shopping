@@ -29,3 +29,21 @@ body {
 	height:60%;
 	
 }
+.active{
+  background-color:#d90000;
+  color:#fff;
+
+}
+.newmenu
+{
+    background-color: red;
+    color: white;
+}
+a.current {
+  background:red;
+  color:white;
+}
+nav a.current {
+  background:darkblue;
+  color:white;
+}

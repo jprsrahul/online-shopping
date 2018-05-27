@@ -40,7 +40,7 @@
 
     <!-- Page Content -->
     <div class="content">
-    <c:if test="${UserClickHome == true}">
+    <c:if test="${UserClickhome == true}">
     <%@include file="Home.jsp" %>
     </c:if>
     
