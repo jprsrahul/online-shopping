@@ -13,8 +13,8 @@ public interface ProductDAO {
 	boolean update(Product product);
 	boolean delete(Product product);
 
-    List<Product> listAciveProducts();
-    List<Product> listAciveProductByCateogry(int cateogryId);
+    List<Product> listActiveProducts();
+    List<Product> listActiveProductByCateogry(int cateogryId);
     List<Product> getLatestActiveProducts(int count);
 
 }

@@ -23,11 +23,14 @@
     <link href="${css }/bootstrap.min.css" rel="stylesheet">
     
     <link href="${css }/bootstrap-theme-readable.min.css" rel="stylesheet">
+    
+    <link href="${css }/dataTables.bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="${css}/myapp.css" rel="stylesheet">
     <script>
     window.menu='${title}';
+    window.contextRoot = '${contextRoot}'
     </script>
 
   </head>
@@ -48,6 +51,10 @@
     <%@include file="listproduct.jsp" %>
     </c:if>
     
+    <c:if test="${UserClickShowProduct == true }">
+    <%@include file="singleProduct.jsp" %>
+    </c:if>
+    
     <c:if test="${UserClickAbout == true}">
     <%@include file="about.jsp" %>
     </c:if>
@@ -55,12 +62,24 @@
     <c:if test="${UserClickcontact == true}">
     <%@include file="contact.jsp" %>
     </c:if>
+    
+    
+    
 </div>
     <!-- Footer -->
     <%@include file="./shared/footer.jsp" %>
     <!-- Bootstrap core JavaScript -->
-    <script src="${js}/jquery.js"></script>
-    <script src="${js}/myapp.js"></script>
+    <script src="${js}/jquery-3.2.1.js"></script>
+    
+    <script src="${js}/bootstrap.min.js"></script>
+    
+    
+    
+    <script src="${js}/jquery.dataTables.js"></script>
+    
+    <!-- - <script src="${js}/dataTables.bootstrap.js"></script>-->
+    
+    <script src="${js}/app.js"></script>
     </div>
   </body>
 

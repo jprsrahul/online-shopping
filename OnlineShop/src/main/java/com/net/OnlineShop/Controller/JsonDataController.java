@@ -24,14 +24,14 @@ public class JsonDataController {
 	@ResponseBody
 	public List<Product> getAllproducts(){
 		
-		return productDAO.listAciveProducts();
+		return productDAO.listActiveProducts();
 	}
 	
 	@RequestMapping("/cateogry/${id}/products")
 	@ResponseBody
 	public List<Product> getProductsByCateogry(@PathVariable int id){
 		
-		return productDAO.listAciveProductByCateogry(id);
+		return productDAO.listActiveProductByCateogry(id);
 	}	
 
 }

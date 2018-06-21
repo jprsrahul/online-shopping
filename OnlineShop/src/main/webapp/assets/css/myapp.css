@@ -30,20 +30,27 @@ body {
 	
 }
 .active{
-  background-color:#d90000;
-  color:#fff;
+  background-color:#ff80ff;
+  color:#0080ff;
 
 }
 .newmenu
 {
-    background-color: red;
     color: white;
 }
 a.current {
-  background:red;
+	background:darkblue;
   color:white;
 }
 nav a.current {
   background:darkblue;
   color:white;
 }
+.dataTableImg{
+	width : 100px;
+	height : 100px;
+}
+light-font .breadcrumb-item + .breadcrumb-item::before {
+    color: #fff; }
+.light-font .breadcrumb-item.active {
+    color: #cfd8dc; }
